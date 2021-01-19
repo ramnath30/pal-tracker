@@ -33,12 +33,7 @@ public class TimeEntryController {
 
     @GetMapping("time-entries")
     public ResponseEntity<List<TimeEntry>> list() {
-        List<TimeEntry> entries = repository.list();
-        if(entries != null && !entries.isEmpty()) {
-            return ResponseEntity.ok().body(entries);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+            return ResponseEntity.ok().body(repository.list());
     }
 
     @PutMapping("time-entries/{timeEntryId}")
