@@ -1,0 +1,17 @@
+#curl -XPOST -H"Content-Type: application/json" https://pal-tracker-subbarayan-ramanathan.apps.evans.pal.pivotal.io/time-entries -d"{\"projectId\": 1, \"userId\": 2, \"date\": \"2019-01-01\", \"hours\": 8}"
+# curl -XPUT -H"Content-Type: application/json" https://pal-tracker-subbarayan-ramanathan.apps.evans.pal.pivotal.io/time-entries/1 -d"{\"projectId\": 88, \"userId\": 99, \"date\": \"2019-01-01\", \"hours\": 8}"
+#curl -XDELETE -H"Content-Type: application/json" https://pal-tracker-subbarayan-ramanathan.apps.evans.pal.pivotal.io/time-entries/1
+# curl https://pal-tracker-subbarayan-ramanathan.apps.evans.pal.pivotal.io/time-entries/1
+#
+# curl -XPOST -H"Content-Type: application/json" http://localhost:8080/time-entries -d"{\"projectId\": 1, \"userId\": 2, \"date\": \"2019-01-01\", \"hours\": 8}"
+# curl -XPUT -H"Content-Type: application/json" http://localhost:8080/time-entries/1 -d"{\"projectId\": 10, \"userId\": 20, \"date\": \"2020-01-01\", \"hours\": 5}"
+# curl -H"Content-Type: application/json" http://localhost:8080/time-entries
+# curl -XDELETE -H"Content-Type: application/json" http://localhost:8080/time-entries/1
+#
+#
+
+./gradlew cloudNativeDeveloperDistributedSystemDeployment \
+    -PregistrationServerUrl=https://registration-pal-subbarayan-ramanathan.apps.evans.pal.pivotal.io \
+    -PbacklogServerUrl=https://backlog-pal-subbarayan-ramanathan.apps.evans.pal.pivotal.io \
+    -PallocationsServerUrl=https://allocations-pal-subbarayan-ramanathan.apps.evans.pal.pivotal.io \
+    -PtimesheetsServerUrl=https://timesheets-pal-subbarayan-ramanathan.apps.evans.pal.pivotal.io
